@@ -10,10 +10,19 @@ public class Computer {
 	public Computer() {
 	}
 
-	
+	public Computer(String name, String cpuBrand, double weight, int RAM, double cpuFrequencyInGHz) {
+		this.name = name;
+		this.cpuBrand = cpuBrand;
+		this.weight = weight;
+		this.RAM = RAM;
+		this.cpuFrequencyInGHz = cpuFrequencyInGHz;
+
+	}
+
 	@Override
 	public String toString() {
-		return null;
+		return this.RAM + " " + this.cpuBrand + " " + " " + this.weight + " " + this.name + " "
+				+ this.cpuFrequencyInGHz;
 	}
 
 	public void switchOn() {
@@ -26,13 +35,15 @@ public class Computer {
 
 	public static void main(String[] args) {
 		Computer computer = new Computer();
+		Computer myComp = new Computer("Apple", "1.7 GHz", 2.2, 16, 1.7);
 		computer.switchOn();
 		computer.switchOff();
 		System.out.println("CPU of the computer = " + computer.cpuBrand);
 		System.out.println(Integer.toString(RAM) + " MB RAM it too much forthis computer");
 		System.out.println("Weight of this computer = " + Double.toString(weight) + " kg");
 		System.out.println("The power of this computer = " + Double.toString(cpuFrequencyInGHz) + " GHz");
-		
+		System.out.println("Method toString:");
+		System.out.println(myComp.toString());
 
 	}
 }
