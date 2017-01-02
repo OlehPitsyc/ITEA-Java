@@ -1,28 +1,50 @@
 package itea78910tasks;
 
 public class Computer {
-	static int RAM = 16;
-	static String name = "Apple";
-	static double weight = 2.2;
-	static String cpuBrand = "Intel Core";
-	static double cpuFrequencyInGHz = 1.7;
+	private static int RAM;
+	private static String name;
+	private static double weight;
+	private static String cpuBrand;
+	private static double cpuFrequencyInGHz;
 
-	public Computer() {
+	public static int getRAM() {
+		return RAM;
 	}
 
-	public Computer(String name, String cpuBrand, double weight, int RAM, double cpuFrequencyInGHz) {
-		this.name = name;
-		this.cpuBrand = cpuBrand;
-		this.weight = weight;
-		this.RAM = RAM;
-		this.cpuFrequencyInGHz = cpuFrequencyInGHz;
-
+	public static void setRAM(int rAM) {
+		RAM = rAM;
 	}
 
-	@Override
-	public String toString() {
-		return this.RAM + " " + this.cpuBrand + " " + " " + this.weight + " " + this.name + " "
-				+ this.cpuFrequencyInGHz;
+	public static String getName() {
+		return name;
+	}
+
+	public static void setName(String name) {
+		Computer.name = name;
+	}
+
+	public static double getWeight() {
+		return weight;
+	}
+
+	public static void setWeight(double weight) {
+		Computer.weight = weight;
+	}
+
+	public static String getCpuBrand() {
+		return cpuBrand;
+	}
+
+	public static void setCpuBrand(String cpuBrand) {
+		Computer.cpuBrand = cpuBrand;
+	}
+
+	public static double getCpuFrequencyInGHz() {
+		return cpuFrequencyInGHz;
+	}
+
+	public static void setCpuFrequencyInGHz(double cpuFrequencyInGHz) {
+		Computer.cpuFrequencyInGHz = cpuFrequencyInGHz;
 	}
 
 	public void switchOn() {
@@ -34,16 +56,17 @@ public class Computer {
 	}
 
 	public static void main(String[] args) {
-		Computer computer = new Computer();
-		Computer myComp = new Computer("Apple", "1.7 GHz", 2.2, 16, 1.7);
-		computer.switchOn();
-		computer.switchOff();
-		System.out.println("CPU of the computer = " + computer.cpuBrand);
-		System.out.println(Integer.toString(RAM) + " MB RAM it too much forthis computer");
-		System.out.println("Weight of this computer = " + Double.toString(weight) + " kg");
-		System.out.println("The power of this computer = " + Double.toString(cpuFrequencyInGHz) + " GHz");
-		System.out.println("Method toString:");
-		System.out.println(myComp.toString());
+		Computer myComp = new Computer();
+		myComp.setName("HP");
+		myComp.setRAM(24);
+		myComp.setCpuBrand("Intel Core");
+		myComp.setWeight(2.0);
+		myComp.setCpuFrequencyInGHz(2.7);
+		System.out.println(myComp.getName());
+		System.out.println(myComp.getRAM());
+		System.out.println(myComp.getCpuBrand());
+		System.out.println(myComp.getCpuFrequencyInGHz());
+		System.out.println(myComp.getWeight());
 
 	}
 }
