@@ -1,8 +1,14 @@
 package itea78910tasks;
 
 public class Calculator {
-	static int firstNumber;
-	static int secondNumber;
+	int firstNumber;
+	int secondNumber;
+
+	public Calculator(int firstNumber, int secondNumber) {
+		super();
+		this.firstNumber = firstNumber;
+		this.secondNumber = secondNumber;
+	}
 
 	public void setFirstNumber(int firstNumber) {
 		this.firstNumber = firstNumber;
@@ -36,15 +42,6 @@ public class Calculator {
 
 	public void resultSinOf() {
 		System.out.println("Sinus of two numbers is " + sinOf());
-	}
-
-	public static void main(String[] args) {
-		Calculator calc = new Calculator();
-		calc.setFirstNumber(15);
-		calc.setSecondNumber(10);
-		calc.printResult();
-		calc.resultSqrtOF();
-		calc.resultSinOf();
 	}
 
 }
