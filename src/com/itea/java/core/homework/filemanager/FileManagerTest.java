@@ -6,7 +6,10 @@ public class FileManagerTest {
 
 	public static void main(String[] args) throws IOException {
 		FileManager file = new FileManager();
-		file.copy("first.txt", "second.txt");
+		file.copyByte("first.txt", "second.txt");
+		file.copyBuffer("first.txt", "second.txt");
+		file.copyReaderWriter("first.txt", "second.txt");
+
 	}
 
 }
