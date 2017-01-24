@@ -1,8 +1,9 @@
 package com.itea.java.core.homework.computerstore;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import itea78910tasks.Computer;
 
@@ -14,28 +15,17 @@ public class ComputerStore {
 		ThirdComputer macBook = new ThirdComputer(16, "MacBookPro", 2.8);
 
 		List<Computer> CatalogComputersList = new ArrayList<>();
+		Map<Integer, Computer> ComputersMap = new HashMap<>();
 
-		CatalogComputersList.add(hp);
-		CatalogComputersList.add(dell);
-		CatalogComputersList.add(macBook);
+		ComputersMap.put(1, hp);
+		ComputersMap.put(2, dell);
+		ComputersMap.put(3, macBook);
 
-		System.out.println();
-		for (Computer computer : CatalogComputersList) {
+		for (Computer computer : ComputersMap.values()) {
 			computer.print();
 		}
 		System.out.println();
+		ComputersMap.forEach((k, v) -> v.print());
 
-		for (int i = 0; i < CatalogComputersList.size(); i++) {
-			Computer computer = (Computer) CatalogComputersList.get(i);
-			computer.print();
-
-		}
-		System.out.println();
-		Iterator<Computer> iterator = CatalogComputersList.iterator();
-		while (iterator.hasNext()) {
-			Computer computer = iterator.next();
-			computer.print();
-
-		}
 	}
 }
