@@ -19,8 +19,7 @@ public class Cart<Computer> {
 
 	public void showCharacteristics() {
 		for (Computer computer : CatalogComputersList) {
-			((itea78910tasks.Computer) computer).print();
-
+			System.out.println(computer);
 		}
 	}
 }
